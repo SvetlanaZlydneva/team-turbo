@@ -1,6 +1,12 @@
-/*
- * Все паршалы импортировать в этот файл
- */
-
 @import 'normalize.scss';
 @import 'base.scss';
+@import 'helpers/variables.scss';
+@import 'helpers/placeholders.scss';
+@import 'helpers/mixins.scss';
+@import 'about-us.scss';
+@import 'contacts.scss';
+@import 'products.scss';
+@import 'how-it-made.scss';
+@import 'testimonials.scss';
+@import 'contacts.scss';
+@import 'footer.scss';
