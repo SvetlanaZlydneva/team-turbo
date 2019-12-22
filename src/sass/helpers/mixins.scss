@@ -1,5 +1,11 @@
-@mixin font($weight: 400, $size:13, $line-height:28, $name:map-get($fonts, sans), $color:map-get($colors, white)) {
-  font: $weight $size+px/$line-height+px $name, map-get($fonts, default);
+@mixin font(
+  $weight: 400,
+  $size: 13,
+  $line-height: 28,
+  $name: map-get($fonts, sans),
+  $color: map-get($colors, white)
+) {
+  font: $weight $size + px/$line-height + px $name, map-get($fonts, default);
   color: $color;
 }
 @mixin transition($property: color) {
