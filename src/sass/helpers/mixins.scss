@@ -2,3 +2,6 @@
   font: $weight $size+px/$line-height+px $name, map-get($fonts, default);
   color: $color;
 }
+@mixin transition($property: color) {
+  transition: $property 200ms linear;
+}
