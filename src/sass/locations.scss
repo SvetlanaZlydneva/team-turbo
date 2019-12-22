@@ -1,0 +1,49 @@
+.location {
+  background-color: rgb(255, 245, 247);
+  background-position: top 100px center;
+}
+
+.location__list {
+  margin-bottom: 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 1510px;
+}
+
+.location__item {
+  padding: 50px 38px;
+  max-width: 254px;
+  height: 490px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+  box-shadow: 0px 10px 40px 0px rgba(212, 20, 66, 0.15);
+}
+
+.location__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2px 16px;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+
+.location__title--cafe {
+  max-width: 62px;
+  background-color: rgb(239, 209, 165);
+}
+
+.location__title--foodtruck {
+  max-width: 108px;
+  background-color: rgb(193, 226, 151);
+}
+
+.location-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 96px;
+}
