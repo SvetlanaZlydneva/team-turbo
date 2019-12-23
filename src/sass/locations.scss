@@ -1,7 +1,14 @@
 .location {
-  background-color: rgb(255, 245, 247);
+  background-color: map-get($colors, lavender-blush);
+  background-image: url(../images/section-testimonials.png);
   background-position: top 100px center;
 }
+
+@media (device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
+    .location {
+    background-image: url(../images/section-testimonials@2x.png);
+  }
 
 .location__list {
   margin-bottom: 56px;
@@ -15,7 +22,7 @@
   padding: 50px 38px;
   max-width: 254px;
   height: 490px;
-  background-color: rgb(255, 255, 255);
+  background-color: map-get($colors, white);
   border-radius: 25px;
   box-shadow: 0px 10px 40px 0px rgba(212, 20, 66, 0.15);
 }
@@ -25,20 +32,52 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-bottom: 28px;
   padding: 2px 16px;
-  text-transform: uppercase;
-  color: rgb(255, 255, 255);
+  @include font(500);
+  @extend %uppercase;
   border-radius: 5px;
 }
 
 .location__title--cafe {
   max-width: 62px;
-  background-color: rgb(239, 209, 165);
+  background-color: map-get($colors, peach-orange);
 }
 
 .location__title--foodtruck {
   max-width: 108px;
-  background-color: rgb(193, 226, 151);
+  background-color: map-get($colors, grin-mist);
+}
+
+.location__subtitle {
+  margin: 0;
+  @include font($weight: 500, $color: map-get($colors, black));
+  text-transform: capitalize;
+}
+
+.location__text {
+  @include font($weight: 500, $line-height: 19, $color: #907e82);
+  padding-top: 14px;
+  margin-bottom: 34px;
+}
+
+.location__schedule-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+  padding: 28px 0;
+  margin-bottom: 30px;
+  border-top: 1px solid rgba(map-get($colors, black), 0.078);
+  border-bottom: 1px solid rgba(map-get($colors, black), 0.078);
+}
+.location__time {
+  @include font($weight: 500, $color:#ffa5ba);
+}
+
+.location__phone-link,
+.location__email-link {
+  @include font($weight: 500, $line-height: 17, $color: #907e82);
 }
 
 .location-links {
@@ -47,3 +86,14 @@
   justify-content: space-between;
   height: 96px;
 }
+
+.location-links__link {
+  display: block;
+  max-width: 160px;
+  padding: 14px 26px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 25px;
+  background-color: map-get($colors, white);
+}
+
