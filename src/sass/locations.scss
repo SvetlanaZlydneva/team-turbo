@@ -1,14 +1,13 @@
 .location {
-  background-color: map-get($colors, lavender-blush);
-  background-image: url(../images/section-testimonials.png);
+  background-image: url(../images/section-location.png);
+  background-color: map-get($colors, lavender-blush); 
   background-position: top 100px center;
-}
 
-@media (device-pixel-ratio: 2),
+  @media (device-pixel-ratio: 2),
   (min-resolution: 192dpi) {
-    .location {
-    background-image: url(../images/section-testimonials@2x.png);
+    background-image: url(../images/section-location@2x.png);
   }
+}
 
 .location__list {
   margin-bottom: 56px;
@@ -56,7 +55,7 @@
 }
 
 .location__text {
-  @include font($weight: 500, $line-height: 19, $color: #907e82);
+  @include font($weight: 500, $line-height: 19, $color: map-get($colors, venus));
   padding-top: 14px;
   margin-bottom: 34px;
 }
@@ -71,13 +70,14 @@
   border-top: 1px solid rgba(map-get($colors, black), 0.078);
   border-bottom: 1px solid rgba(map-get($colors, black), 0.078);
 }
+
 .location__time {
-  @include font($weight: 500, $color:#ffa5ba);
+  @include font($weight: 500, $color: map-get($colors, lite-pink));
 }
 
 .location__phone-link,
 .location__email-link {
-  @include font($weight: 500, $line-height: 17, $color: #907e82);
+  @include font($weight: 500, $line-height: 17, $color: map-get($colors, venus));
 }
 
 .location-links {
@@ -96,4 +96,3 @@
   border-radius: 25px;
   background-color: map-get($colors, white);
 }
-
