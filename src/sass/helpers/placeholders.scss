@@ -1,0 +1,21 @@
+%block {
+  display: block;
+}
+
+%flex {
+  display: flex;
+}
+
+%btn {
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+%uppercase {
+  text-transform: uppercase;
+}
+
+%auto {
+  margin: 0 auto;
+}
