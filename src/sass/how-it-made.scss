@@ -3,11 +3,23 @@
 
   .section__title {
     padding: 117px 0 60px;
+
+    @media (min-width: 768px) {
+      padding: 122px 0 107px;
+    }
+
+    @media (min-width: 1280px) {
+      padding: 122px 0 117px;
+    }
   }
 
   .section__title--title {
-    padding-top: 8px;
-    line-height: 36px;
+    padding-top: 6px;
+    line-height: 37px;
+
+    @media (min-width: 768px) {
+      line-height: 40px;
+    }
   }
 
   @media(min-resolution:192dpi),
@@ -17,8 +29,6 @@
 
   @media (min-width: 1280px) {
     background: url(../images/section-made.png) no-repeat center/cover, map-get($colors, lavender-blush);
-
-
   }
 
   @media(min-width: 1280px) and (min-resolution:192dpi),
@@ -30,11 +40,33 @@
 
 .how-it-made__article {
   margin-bottom: 42px;
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 66px;
+  }
+
+  @media (min-width: 1280px) {
+    justify-content: center;
+    margin-bottom: 85px;
+  }
 }
 
 .how-it-made__article--img {
   width: 247px;
   margin-left: 15px;
+
+  @media (min-width: 768px) {
+    margin-left: 0;
+    width: 302px;
+  }
+
+  @media (min-width: 1280px) {
+    width: 511px;
+    margin-right: 85px;
+  }
 }
 
 .how-it-made__text {
@@ -43,19 +75,27 @@
   @media (min-width: 768px) {
     display: flex;
     flex-direction: column;
+    width: 305px;
+    padding: 0;
+  }
+
+  @media (min-width: 1280px) {
+    width: 451px;
   }
 }
 
 .how-it-made__text--first-paragraph {
   @include font($line-height:19, $color:map-get($colors, black));
-  padding: 88px 0 34px;
+  padding: 88px 0 32px;
 
   @media (min-width: 768px) {
     @include font($size:14, $line-height:25, $color:map-get($colors, black));
+    padding: 0 0 30px;
   }
 
   @media (min-width: 1280px) {
     @include font($size:17, $color:map-get($colors, black));
+    padding: 0 0 32px;
   }
 }
 
@@ -73,14 +113,16 @@
 
 .how-it-made__text--third-paragraph {
   @include font($line-height:20, $color:map-get($colors, venus));
-  padding: 17px 0 34px;
+  padding: 12px 0 34px;
 
   @media (min-width: 768px) {
     @include font($size:14, $line-height:20, $color:map-get($colors, venus));
+    padding: 10px 0 64px;
   }
 
   @media (min-width: 1280px) {
     @include font($size:16, $color:map-get($colors, venus));
+    padding: 19px 0 41px;
   }
 }
 
@@ -94,6 +136,10 @@
 
   &:hover {
     background-color: map-get($colors, whisper);
+  }
+
+  @media (min-width: 768px) {
+    width: 177px;
   }
 
   @media (min-width: 1280px) {
@@ -110,22 +156,49 @@
 }
 
 .indicators {
-  margin-bottom: 60px;
+  margin-bottom: 105px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 136px;
+  }
 }
 
 .indicators__list {
   padding: 0 50px 0 20px;
 
   @media (min-width: 768px) {
-    width: 100%;
     display: flex;
+    padding: 0;
+  }
+
+  @media (min-width: 1280px) {
+    padding-left: 95px
   }
 }
 
 .indicators__item {
-  &:not(:last-child) {
-    margin-bottom: 35px;
+  @media (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 35px;
+    }
   }
+
+  @media (min-width: 768px) {
+    width: 155px;
+
+    &:not(:last-child) {
+      margin-right: 80px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    width: 265px;
+
+    &:not(:last-child) {
+      margin-right: 90px;
+    }
+  }
+
 }
 
 .indicators__item--icon-1 {
@@ -146,10 +219,12 @@
 
   @media (min-width: 768px) {
     font-size: 51px;
+    padding: 34px 0 18px;
   }
 
   @media (min-width: 1280px) {
     font-size: 60px;
+    padding: 45px 0 21px;
   }
 }
 
