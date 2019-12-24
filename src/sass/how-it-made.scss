@@ -241,12 +241,14 @@
 }
 
 .how-it-made__collage {
-  background: url(../images/section-made-collage.jpg) no-repeat center/contain;
+  background: url(../images/section-made-collage.png) no-repeat center/contain,
+    linear-gradient(to bottom, map-get($colors, lavender-blush) 40%, map-get($colors, white) 0);
   height: 110px;
 
   @media(min-resolution:192dpi),
   (min-resolution:2dppx) {
-    background: url(../images/section-made-collage@2x.jpg) no-repeat center/contain;
+    background: url(../images/section-made-collage@2x.png) no-repeat center/contain,
+      linear-gradient(to bottom, map-get($colors, lavender-blush) 40%, map-get($colors, white) 0);
   }
 
   @media (min-width: 768px) {
