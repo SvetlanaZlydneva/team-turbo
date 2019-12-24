@@ -1,0 +1,62 @@
+.container {
+    width:1060px;
+    margin: 0 auto;
+}
+.testim-block__img {
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 120px;
+}
+.slide-img {
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 20px;
+}
+.slide-text {
+    max-width: 925px;
+    background-color: #fafafa;
+    color: #000;
+    font-family: 'DM+Sans';
+    font-weight: 500;
+    text-align: center;
+    font-size: 17px;
+    display: block;
+    margin: 0 auto;
+    line-height: 31px;
+    z-index: 5;
+    padding: 30px 80px;
+    box-sizing: border-box;
+}
+.slide-text__quotes::before {
+    content: url(../images/blockquote.svg);
+    z-index: 1;
+    margin-right: -20px;
+   
+}
+.testim-block__slider {
+    max-width: 925px;
+    margin: 0 auto;
+    display: block;
+}
+.slide-text  p {
+    @include font($weight:500, $size:17, $line-height:31, $color:map-get($colors, black));
+    border-bottom: 1px solid#e1e1e1;
+}
+.testim-block__circle {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #d41442;
+    margin-right: 10px;
+    display: flex;
+}
+.block-circle {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+}
+.testim-block__name {
+    @include font($weight:500, $size:20, $line-height:28, $color:map-get($colors, black));
+    text-align: center;
+}
