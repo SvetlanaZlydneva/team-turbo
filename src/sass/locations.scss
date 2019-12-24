@@ -1,16 +1,16 @@
 .location {
+  padding-bottom: 115px;
   background-image: url(../images/section-location.png);
-  background-color: map-get($colors, lavender-blush); 
+  background-color: map-get($colors, lavender-blush);
   background-position: top 100px center;
 
-  @media (device-pixel-ratio: 2),
-  (min-resolution: 192dpi) {
+  @media (device-pixel-ratio: 2), (min-resolution: 192dpi) {
     background-image: url(../images/section-location@2x.png);
   }
 }
 
 .location__list {
-  margin-bottom: 56px;
+  margin-bottom: 54px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -31,9 +31,9 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-bottom: 28px;
+  margin-bottom: 27px;
   padding: 2px 16px;
-  @include font(500);
+  @include font($weight: 500, $line-height: 13);
   @extend %uppercase;
   border-radius: 5px;
 }
@@ -55,9 +55,13 @@
 }
 
 .location__text {
-  @include font($weight: 500, $line-height: 19, $color: map-get($colors, venus));
-  padding-top: 14px;
-  margin-bottom: 34px;
+  @include font(
+    $weight: 500,
+    $line-height: 19,
+    $color: map-get($colors, venus)
+  );
+  padding-top: 12px;
+  margin-bottom: 32px;
 }
 
 .location__schedule-box {
@@ -65,34 +69,71 @@
   flex-direction: column;
   justify-content: flex-start;
   align-content: flex-start;
-  padding: 28px 0;
+  padding-top: 22px;
+  padding-bottom: 19px;
   margin-bottom: 30px;
   border-top: 1px solid rgba(map-get($colors, black), 0.078);
   border-bottom: 1px solid rgba(map-get($colors, black), 0.078);
 }
 
 .location__time {
-  @include font($weight: 500, $color: map-get($colors, lite-pink));
+  padding-bottom: 16px;
+  @include font(
+    $weight: 500,
+    $line-height: 13,
+    $color: map-get($colors, lite-pink)
+  );
 }
 
 .location__phone-link,
 .location__email-link {
-  @include font($weight: 500, $line-height: 17, $color: map-get($colors, venus));
+  @include font(
+    $weight: 500,
+    $line-height: 17,
+    $color: map-get($colors, venus)
+  );
+  @include transition;
+  &:hover {
+    text-decoration: underline;
+    @include transition;
+  }
 }
 
 .location-links {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 96px;
+  display: block;
+  width: 160px;
+  @extend %auto;
 }
 
 .location-links__link {
   display: block;
   max-width: 160px;
-  padding: 14px 26px;
+  padding: 14px 24px;
+  @include font(
+    $weight: 700,
+    $line-height: 13,
+    $color: map-get($colors, crimson)
+  );
   text-align: center;
+  text-transform: capitalize;
   text-decoration: none;
   border-radius: 25px;
   background-color: map-get($colors, white);
+
+  &:hover {
+    color: map-get($colors, white);
+    background-color: map-get($colors, crimson);
+  }
+
+  &:after {
+    content: '\f105';
+    font-family: map-get($fonts, awesome);
+    display: inline-block;
+    padding-left: 17px;
+    font-size: 14px;
+  }
+}
+
+.location-links__link--location {
+  margin-bottom: 12px;
 }
