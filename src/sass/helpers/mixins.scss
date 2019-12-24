@@ -11,3 +11,18 @@
 @mixin transition($property: color) {
   transition: $property 200ms linear;
 }
+@mixin how-it-made-icons($name){
+  &::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(../images/icons/#{$name}.png) no-repeat left/contain;
+
+    @media(min-resolution:192dpi),
+    (min-resolution:2dppx) {
+      background: url(../images/icons/#{$name}@2x.png) no-repeat left/contain;
+    }
+
+  }
+}
