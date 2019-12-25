@@ -1,12 +1,20 @@
 .location {
-  background:url(../images/section-location.png) no-repeat center/cover, 
-  linear-gradient(to bottom, map-get($colors,white), map-get($colors,lavender-blush) 25%);
+  background: url(../images/section-location.png) no-repeat center/cover,
+    linear-gradient(
+      to bottom,
+      map-get($colors, white),
+      map-get($colors, lavender-blush) 25%
+    );
 
   @media (device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    background:url(../images/section-location@2x.png) no-repeat center/cover, 
-  linear-gradient(to bottom, map-get($colors,white), map-get($colors,lavender-blush) 25%);
+    background: url(../images/section-location@2x.png) no-repeat center/cover,
+      linear-gradient(
+        to bottom,
+        map-get($colors, white),
+        map-get($colors, lavender-blush) 25%
+      );
   }
-  @media (min-width: 320px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     padding-bottom: 120px;
   }
   @media (min-width: 768px) {
@@ -16,14 +24,10 @@
 
 .location__list {
   display: flex;
-
-  @media (min-width: 320px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     margin-bottom: 54px;
     justify-content: space-between;
     flex-direction: column;
-  }
-
-  @media (min-width: 320px) and (max-width: 767px) {
     height: 1510px;
   }
 
@@ -32,6 +36,7 @@
     justify-content: center;
     flex-direction: row;
   }
+
   @media (min-width: 1280px) {
     margin-bottom: 86px;
   }
@@ -42,29 +47,24 @@
   border-radius: 25px;
   box-shadow: 0px 10px 40px 0px rgba(212, 20, 66, 0.15);
 
-  @media (min-width: 320px) {
-    padding: 50px 34px;
+  @media (min-width: 320px) and (max-width: 767px) {
+    padding: 58px 34px;
     max-width: 254px;
-    height: 490px;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1279px) {
     padding: 46px 32px;
     max-width: 224px;
-    height: 550px;
   }
+
   @media (min-width: 1280px) {
     padding: 55px 58px;
     max-width: 336px;
-    height: 575px;
   }
 }
 
 .location__item:not(:last-child) {
   @media (min-width: 768px) {
-    margin-right: 14px;
-  }
-  @media (min-width: 1280px) {
     margin-right: 14px;
   }
 }
@@ -79,7 +79,7 @@
   @extend %uppercase;
   border-radius: 5px;
 
-  @media (min-width: 320px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     @include font($weight: 500, $line-height: 13);
   }
 
@@ -100,15 +100,14 @@
 
 .location__subtitle {
   margin: 0;
-
   text-transform: capitalize;
 
-  @media (min-width: 320px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     @include font($weight: 500, $color: map-get($colors, black));
   }
 
   @media (min-width: 768px) {
-    @include font($size: 14, $color: map-get($colors, black));
+    @include font($weight: 500, $size: 14, $color: map-get($colors, black));
   }
 }
 
@@ -116,7 +115,7 @@
   padding-top: 12px;
   margin-bottom: 32px;
 
-  @media (min-width: 320px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     @include font(
       $weight: 500,
       $line-height: 19,
@@ -125,6 +124,7 @@
   }
 
   @media (min-width: 768px) {
+    
     @include font(
       $weight: 500,
       $size: 14,
@@ -149,7 +149,7 @@
 .location__time {
   padding-bottom: 16px;
 
-  @media (min-width: 320px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     @include font(
       $weight: 500,
       $line-height: 13,
@@ -184,13 +184,14 @@
 }
 
 .location-links {
-  @media (min-width: 320px) {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: 320px) and (max-width: 767px) {
     width: 320px;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1279px) {
     width: 720px;
   }
 
@@ -200,30 +201,29 @@
 }
 
 .location-links__list {
-  @media (min-width: 320px) {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  @media (min-width: 320px) and (max-width: 767px) {
     width: 254px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
     flex-direction: column;
   }
 
   @media (min-width: 768px) {
     width: 500px;
-    display: flex;
-
     flex-direction: row;
   }
 }
 
 .location-links__item {
-  @media (min-width: 320px) and (max-width: 768px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     width: 160px;
   }
 }
 
 .location-links__item--location {
-  @media (min-width: 320px) and (max-width: 768px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     margin-bottom: 12px;
   }
 
@@ -260,7 +260,7 @@
     font-size: 14px;
   }
 
-  @media (min-width: 320px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     @include font(
       $weight: 700,
       $line-height: 13,
@@ -276,7 +276,4 @@
       $color: map-get($colors, crimson)
     );
   }
-}
-
-.location-links__link--location {
 }

@@ -2,7 +2,6 @@
   background-color: map-get($colors, lavender-blush);
   padding-bottom: 42px;
   border-bottom: 2px solid rgba(map-get($colors, black), 0.078);
-
 }
 
 .socials__container {
@@ -18,20 +17,11 @@ align-content: flex-start;
   display: flex;
   align-content: flex-start;
 
-  @media (min-width: 320px) and (max-width: 768px) {
+  @media (min-width: 320px) and (max-width: 767px) {
    padding-right: 36px;
   }
-  @media (min-width: 768px) {
-    width: 50%;
-  }
-}
-
-.socials__content {
-  @media (min-width: 320px) {
-    // max-width: 254px;
-  }
-  @media (min-width: 768px) {
- 
+  @media (min-width: 768px)and (max-width: 1279px) {
+   width: 360px;
   }
 }
 
@@ -75,8 +65,7 @@ align-content: flex-start;
   }
   @media (min-width: 768px) {
     @include font($weight: 700, $size: 14, $color: map-get($colors, black));
-    width: 450px;
-    display: flex;
+     display: flex;
     flex-direction: row;
   }
 }
@@ -104,14 +93,14 @@ align-content: flex-start;
   @media (min-width: 1280px) {
     padding-bottom: 10px;
   }
-
 }
 
 .footer-copyright {
   display: flex;
   justify-content: center;
   align-items: center;
-  @media (min-width: 320px) {
+
+  @media (min-width: 320px) and (max-width: 767px) {
     padding-top: 20px;
     flex-direction: column;
     @include font(
