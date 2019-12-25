@@ -1,0 +1,232 @@
+.about-us {
+  background: url(../images/section-about.png) no-repeat center/cover, map-get($colors, pink);
+
+  @media(min-resolution:192dpi),
+  (min-resolution:2dppx) {
+    background: url(../images/section-about@2x.png) no-repeat left 26px bottom/388px auto, map-get($colors, pink);
+  }
+
+  @media (min-width: 768px) {
+    background: url(../images/section-about.png) no-repeat center/contain, map-get($colors, pink);
+  }
+
+  @media(min-width: 768px) and (min-resolution:192dpi),
+  (min-resolution:2dppx) {
+    background: url(../images/section-about@2x.png) no-repeat center/contain, map-get($colors, pink);
+  }
+
+}
+
+.info-block {
+  padding: 198px 0 155px;
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    padding: 102px 0 68px;
+  }
+
+  @media (min-width: 1280px) {
+    display: flex;
+    justify-content: space-between;
+    padding: 174px 0 112px;
+  }
+}
+
+.about-us__info {
+  width: 220px;
+
+  @media (min-width: 768px) {
+    width: 165px;
+  }
+
+  @media (min-width: 1280px) {
+    width: 270px;
+  }
+}
+
+.about-us__info--title {
+  margin-bottom: 20px;
+  @extend %uppercase;
+  @include font($size:27, $line-height:26, $name: map-get($fonts, titan));
+
+  @media (min-width: 768px) {
+    font-size: 24px;
+  }
+
+  @media (min-width: 1280px) {
+    font-size: 37px;
+    line-height: 38px;
+    margin-bottom: 27px;
+  }
+
+  span {
+    @include font($size:45, $line-height:46, $name: map-get($fonts, titan), $color:map-get($colors, crimson));
+    @extend %block;
+
+    @media (min-width: 768px) {
+      font-size: 36px;
+      line-height: 26px;
+    }
+
+    @media (min-width: 1280px) {
+      font-size: 57px;
+      line-height: 56px;
+    }
+  }
+
+}
+
+.about-us__info--link {
+  display: inline-block;
+  @include font($size:9, $line-height:31);
+  padding: 0 19px;
+  border-radius: 25px;
+  @include transition(background-color);
+
+  @media (min-width: 768px) {
+    padding: 0 12px;
+    line-height: 23px;
+  }
+
+  @media (min-width: 1280px) {
+    padding: 0 25px;
+    line-height: 40px;
+    font-size: 13px;
+  }
+
+}
+
+.link-products {
+  background-color: map-get($colors, crimson);
+  margin-right: 5px;
+
+  &:hover {
+    background-color: map-get($colors, cardinal);
+  }
+
+}
+
+.link-made {
+  background-color: map-get($colors, white);
+  color: map-get($colors, crimson);
+
+  &:hover {
+    background-color: map-get($colors, whisper);
+  }
+}
+
+.about-us__product {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+.about-us__institutions {
+  display: none;
+  text-align: end;
+  padding-right: 60px;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+
+  @media (min-width: 1280px) {
+    padding-right: 123px;
+  }
+}
+
+.about-us__item {
+  position: relative;
+
+  &:first-child {
+    margin-bottom: 17px;
+
+    @media (min-width: 1280px) {
+      margin-bottom: 27px;
+    }
+  }
+
+  &:after {
+    content: "";
+    @extend %block;
+    position: absolute;
+    top: -7px;
+    right: -8px;
+    width: 16px;
+    height: 16px;
+    background-color: map-get($colors, white);
+    border-radius: 50%;
+    z-index: 1;
+
+    @media (min-width: 1280px) {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+}
+
+.about-us__item--quantity {
+  @include font($size:28, $line-height:20, $name:map-get($fonts, titan), $color:map-get($colors, crimson));
+  position: relative;
+  z-index: 2;
+
+  @media (min-width: 1280px) {
+    font-size: 45px;
+    line-height: 35px;
+  }
+}
+
+.about-us__item--places {
+  @include font($size:8, $line-height:20);
+
+  @media (min-width: 1280px) {
+    font-size: 14px;
+    line-height: 32px;
+  }
+}
+
+.about-us__decription {
+  display: none;
+  width: 115px;
+  margin-left: 119px;
+  @include font($size:8, $line-height:12);
+  padding-bottom: 37px;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+
+  @media (min-width: 1280px) {
+    width: 185px;
+    @include font($size:13, $line-height:20);
+    margin-left: 197px;
+    padding-bottom: 57px;
+  }
+
+}
+
+.about-us__decription--text {
+  padding-bottom: 6px;
+
+  @media (min-width: 1280px) {
+    padding-bottom: 15px;
+  }
+}
+
+.about-us__decription--link {
+  text-align: center;
+  background-color: map-get($colors, white);
+  color: map-get($colors, crimson);
+  width: 18px;
+  line-height: 18px;
+  border-radius: 50%;
+
+  @media (min-width: 1280px) {
+    width: 27px;
+    line-height: 27px;
+  }
+}
