@@ -1,0 +1,121 @@
+.slider__list {
+  padding: 81px 0 20px;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    padding: 120px 0 25px;
+  }
+  @media (min-width: 1280px) {
+    padding: 123px 0 35px;
+  }
+}
+
+.slider__item {
+  display: none;
+}
+
+.active-slide {
+  display: block;
+}
+
+.slider__item--img {
+  margin: 0 auto 20px;
+  border-radius: 50%;
+}
+
+.slider__item--text {
+  @extend %auto;
+  width: 250px;
+  padding: 29px 0 36px;
+  background-color: map-get($colors, snow);
+  @include font($weight:500, $line-height:31, $color:map-get($colors, black));
+
+  span {
+    border-bottom: 1px solid map-get($colors, gainsboro);
+
+    &:before {
+      content: url(../images/blockquote.svg);
+      margin-right: -20px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    width: 610px;
+    font-size: 15px;
+  }
+
+  @media (min-width: 1280px) {
+    width: 927px;
+    font-size: 17px;
+  }
+}
+
+.slider__item--text-box {
+  width: 125px;
+  @extend %auto;
+
+  @media (min-width: 768px) {
+    width: 453px;
+  }
+
+  @media (min-width: 1280px) {
+    width: 727px;
+  }
+}
+
+.slider__item--name {
+  @include font($weight:500, $color:map-get($colors, black));
+  padding: 0 0 5px;
+
+  &:before {
+    content: "\f141";
+    font-family: map-get($fonts, awesome);
+    display: block;
+    color: map-get($colors, crimson);
+  }
+
+  @media (min-width: 768px) {
+    font-size: 17px;
+  }
+
+  @media (min-width: 1280px) {
+    font-size: 20px;
+  }
+}
+
+.btn-group {
+  @extend %flex;
+  justify-content: center;
+  padding: 0 0 90px;
+
+  @media (min-width: 768px) {
+    padding: 0 0 115px;
+  }
+
+}
+
+.btn-group__btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: map-get($colors, very-light-drey);
+
+  &:not(:last-child) {
+    margin-right: 18px;
+  }
+}
+
+.btn-group__btn--active {
+  position: relative;
+
+  &::after {
+    content: "\f015";
+    font-family: map-get($fonts, awesome);
+    color: map-get($colors, cardinal);
+    position: absolute;
+    top: -3px;
+    left: -1px;
+  }
+
+  background-color: transparent;
+}
