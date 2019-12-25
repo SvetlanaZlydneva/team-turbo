@@ -1,29 +1,72 @@
 .location {
-  background-image: url(../images/section-location.png);
-  background-color: map-get($colors, lavender-blush); 
-  background-position: top 100px center;
+  background: url(../images/section-location.png) no-repeat center/cover,
+    linear-gradient(
+      to bottom,
+      map-get($colors, white),
+      map-get($colors, lavender-blush) 25%
+    );
 
-  @media (device-pixel-ratio: 2),
-  (min-resolution: 192dpi) {
-    background-image: url(../images/section-location@2x.png);
+  @media (device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background: url(../images/section-location@2x.png) no-repeat center/cover,
+      linear-gradient(
+        to bottom,
+        map-get($colors, white),
+        map-get($colors, lavender-blush) 25%
+      );
+  }
+  @media (min-width: 320px) and (max-width: 767px) {
+    padding-bottom: 120px;
+  }
+  @media (min-width: 768px) {
+    padding-bottom: 160px;
   }
 }
 
 .location__list {
-  margin-bottom: 56px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 1510px;
+  @media (min-width: 320px) and (max-width: 767px) {
+    margin-bottom: 54px;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 1510px;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 77px;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 86px;
+  }
 }
 
 .location__item {
-  padding: 50px 38px;
-  max-width: 254px;
-  height: 490px;
   background-color: map-get($colors, white);
   border-radius: 25px;
   box-shadow: 0px 10px 40px 0px rgba(212, 20, 66, 0.15);
+
+  @media (min-width: 320px) and (max-width: 767px) {
+    padding: 58px 34px;
+    max-width: 254px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1279px) {
+    padding: 46px 32px;
+    max-width: 224px;
+  }
+
+  @media (min-width: 1280px) {
+    padding: 55px 58px;
+    max-width: 336px;
+  }
+}
+
+.location__item:not(:last-child) {
+  @media (min-width: 768px) {
+    margin-right: 14px;
+  }
 }
 
 .location__title {
@@ -31,11 +74,18 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-bottom: 28px;
+  margin-bottom: 27px;
   padding: 2px 16px;
-  @include font(500);
   @extend %uppercase;
   border-radius: 5px;
+
+  @media (min-width: 320px) and (max-width: 767px) {
+    @include font($weight: 500, $line-height: 13);
+  }
+
+  @media (min-width: 768px) {
+    @include font($weight: 500, $size: 17, $line-height: 17);
+  }
 }
 
 .location__title--cafe {
@@ -50,14 +100,38 @@
 
 .location__subtitle {
   margin: 0;
-  @include font($weight: 500, $color: map-get($colors, black));
   text-transform: capitalize;
+
+  @media (min-width: 320px) and (max-width: 767px) {
+    @include font($weight: 500, $color: map-get($colors, black));
+  }
+
+  @media (min-width: 768px) {
+    @include font($weight: 500, $size: 14, $color: map-get($colors, black));
+  }
 }
 
 .location__text {
-  @include font($weight: 500, $line-height: 19, $color: map-get($colors, venus));
-  padding-top: 14px;
-  margin-bottom: 34px;
+  padding-top: 12px;
+  margin-bottom: 32px;
+
+  @media (min-width: 320px) and (max-width: 767px) {
+    @include font(
+      $weight: 500,
+      $line-height: 19,
+      $color: map-get($colors, venus)
+    );
+  }
+
+  @media (min-width: 768px) {
+    
+    @include font(
+      $weight: 500,
+      $size: 14,
+      $line-height: 19,
+      $color: map-get($colors, venus)
+    );
+  }
 }
 
 .location__schedule-box {
@@ -65,34 +139,141 @@
   flex-direction: column;
   justify-content: flex-start;
   align-content: flex-start;
-  padding: 28px 0;
+  padding-top: 22px;
+  padding-bottom: 19px;
   margin-bottom: 30px;
   border-top: 1px solid rgba(map-get($colors, black), 0.078);
   border-bottom: 1px solid rgba(map-get($colors, black), 0.078);
 }
 
 .location__time {
-  @include font($weight: 500, $color: map-get($colors, lite-pink));
+  padding-bottom: 16px;
+
+  @media (min-width: 320px) and (max-width: 767px) {
+    @include font(
+      $weight: 500,
+      $line-height: 13,
+      $color: map-get($colors, lite-pink)
+    );
+  }
+
+  @media (min-width: 780px) {
+    @include font(
+      $weight: 500,
+      $size: 14,
+      $line-height: 14,
+      $color: map-get($colors, lite-pink)
+    );
+  }
 }
 
 .location__phone-link,
 .location__email-link {
-  @include font($weight: 500, $line-height: 17, $color: map-get($colors, venus));
+  @include font(
+    $weight: 500,
+    $size: 14,
+    $line-height: 17,
+    $color: map-get($colors, venus)
+  );
+  @include transition;
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    @include transition;
+  }
 }
 
 .location-links {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 96px;
+  justify-content: center;
+
+  @media (min-width: 320px) and (max-width: 767px) {
+    width: 320px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1279px) {
+    width: 720px;
+  }
+
+  @media (min-width: 1280px) {
+    width: 1220px;
+  }
+}
+
+.location-links__list {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  @media (min-width: 320px) and (max-width: 767px) {
+    width: 254px;
+    flex-direction: column;
+  }
+
+  @media (min-width: 768px) {
+    width: 500px;
+    flex-direction: row;
+  }
+}
+
+.location-links__item {
+  @media (min-width: 320px) and (max-width: 767px) {
+    width: 160px;
+  }
+}
+
+.location-links__item--location {
+  @media (min-width: 320px) and (max-width: 767px) {
+    margin-bottom: 12px;
+  }
+
+  @media (min-width: 768px) {
+    width: 198px;
+    padding-right: 8px;
+  }
+}
+
+.location-links__item--franchise {
+  @media (min-width: 768px) {
+    width: 177px;
+  }
 }
 
 .location-links__link {
-  display: block;
-  max-width: 160px;
-  padding: 14px 26px;
+  padding: 14px 24px;
   text-align: center;
+  text-transform: capitalize;
   text-decoration: none;
   border-radius: 25px;
   background-color: map-get($colors, white);
+
+  &:hover {
+    color: map-get($colors, white);
+    background-color: map-get($colors, crimson);
+  }
+
+  &:after {
+    content: '\f105';
+    font-family: map-get($fonts, awesome);
+    display: inline-block;
+    padding-left: 17px;
+    font-size: 14px;
+  }
+
+  @media (min-width: 320px) and (max-width: 767px) {
+    @include font(
+      $weight: 700,
+      $line-height: 13,
+      $color: map-get($colors, crimson)
+    );
+  }
+
+  @media (min-width: 768px) {
+    @include font(
+      $weight: 700,
+      $size: 14,
+      $line-height: 14,
+      $color: map-get($colors, crimson)
+    );
+  }
 }
