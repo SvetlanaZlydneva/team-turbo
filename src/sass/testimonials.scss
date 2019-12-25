@@ -1,62 +1,121 @@
-.container {
-    width:1060px;
-    margin: 0 auto;
+.slider__list {
+  padding: 81px 0 20px;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    padding: 120px 0 25px;
+  }
+  @media (min-width: 1280px) {
+    padding: 123px 0 35px;
+  }
 }
-.testim-block__img {
-    margin: 0 auto;
-    display: block;
-    margin-bottom: 120px;
+
+.slider__item {
+  display: none;
 }
-.slide-img {
-    border-radius: 50%;
-    margin: 0 auto;
-    display: block;
-    margin-bottom: 20px;
+
+.active-slide {
+  display: block;
 }
-.slide-text {
-    max-width: 925px;
-    background-color: #fafafa;
-    color: #000;
-    font-family: 'DM+Sans';
-    font-weight: 500;
-    text-align: center;
+
+.slider__item--img {
+  margin: 0 auto 20px;
+  border-radius: 50%;
+}
+
+.slider__item--text {
+  @extend %auto;
+  width: 250px;
+  padding: 29px 0 36px;
+  background-color: map-get($colors, snow);
+  @include font($weight:500, $line-height:31, $color:map-get($colors, black));
+
+  span {
+    border-bottom: 1px solid map-get($colors, gainsboro);
+
+    &:before {
+      content: url(../images/blockquote.svg);
+      margin-right: -20px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    width: 610px;
+    font-size: 15px;
+  }
+
+  @media (min-width: 1280px) {
+    width: 927px;
     font-size: 17px;
+  }
+}
+
+.slider__item--text-box {
+  width: 125px;
+  @extend %auto;
+
+  @media (min-width: 768px) {
+    width: 453px;
+  }
+
+  @media (min-width: 1280px) {
+    width: 727px;
+  }
+}
+
+.slider__item--name {
+  @include font($weight:500, $color:map-get($colors, black));
+  padding: 0 0 5px;
+
+  &:before {
+    content: "\f141";
+    font-family: map-get($fonts, awesome);
     display: block;
-    margin: 0 auto;
-    line-height: 31px;
-    z-index: 5;
-    padding: 30px 80px;
-    box-sizing: border-box;
+    color: map-get($colors, crimson);
+  }
+
+  @media (min-width: 768px) {
+    font-size: 17px;
+  }
+
+  @media (min-width: 1280px) {
+    font-size: 20px;
+  }
 }
-.slide-text__quotes::before {
-    content: url(../images/blockquote.svg);
-    z-index: 1;
-    margin-right: -20px;
-   
+
+.btn-group {
+  @extend %flex;
+  justify-content: center;
+  padding: 0 0 90px;
+
+  @media (min-width: 768px) {
+    padding: 0 0 115px;
+  }
+
 }
-.testim-block__slider {
-    max-width: 925px;
-    margin: 0 auto;
-    display: block;
+
+.btn-group__btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: map-get($colors, very-light-drey);
+
+  &:not(:last-child) {
+    margin-right: 18px;
+  }
 }
-.slide-text  p {
-    @include font($weight:500, $size:17, $line-height:31, $color:map-get($colors, black));
-    border-bottom: 1px solid#e1e1e1;
-}
-.testim-block__circle {
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background-color: #d41442;
-    margin-right: 10px;
-    display: flex;
-}
-.block-circle {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0px;
-}
-.testim-block__name {
-    @include font($weight:500, $size:20, $line-height:28, $color:map-get($colors, black));
-    text-align: center;
+
+.btn-group__btn--active {
+  position: relative;
+
+  &::after {
+    content: "\f015";
+    font-family: map-get($fonts, awesome);
+    color: map-get($colors, cardinal);
+    position: absolute;
+    top: -3px;
+    left: -1px;
+  }
+
+  background-color: transparent;
 }
