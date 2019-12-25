@@ -1,17 +1,131 @@
+.socials {
+  background-color: map-get($colors, lavender-blush);
+  padding-bottom: 42px;
+  border-bottom: 2px solid rgba(map-get($colors, black), 0.078);
+
+}
+
+.socials__container {
+ @media (min-width: 768px) {
+ display: flex;
+justify-content: space-between;
+align-content: flex-start;
+}
+ }
+
+.socials__title {
+  @extend %uppercase;
+  display: flex;
+  align-content: flex-start;
+
+  @media (min-width: 320px) and (max-width: 768px) {
+   padding-right: 36px;
+  }
+  @media (min-width: 768px) {
+    width: 50%;
+  }
+}
+
+.socials__content {
+  @media (min-width: 320px) {
+    // max-width: 254px;
+  }
+  @media (min-width: 768px) {
+ 
+  }
+}
+
+.socials-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.socials-links__list {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: 320px) and (max-width: 767px) {
+    padding: 42px 0;
+  }
+  @media (min-width: 768px) {
+    padding-bottom: 46px;
+  }
+}
+
+.socials-links__icon {
+  height: 34px;
+  width: 34px;
+  fill: map-get($colors, lite-pink);
+  @include transition;
+
+  &:hover,
+  &:focus {
+    fill: map-get($colors, crimson);
+    @include transition;
+  }
+}
+
+.socials-contacts__text {
+  @media (min-width: 320px) and (max-width: 767px) {
+    display: inline-block;
+    @include font($weight: 700, $color: map-get($colors, black));
+  }
+  @media (min-width: 768px) {
+    @include font($weight: 700, $size: 14, $color: map-get($colors, black));
+    width: 450px;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.socials-contacts__phone {
+  @media (min-width: 320px) and (max-width: 767px) {
+    display: inline-block;
+    @include font($weight: 700, $color: map-get($colors, crimson));
+  }
+
+  @media (min-width: 768px) {
+    @include font($weight: 700, $size: 14, $color: map-get($colors, crimson));
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
 .footer {
   background-color: map-get($colors, lavender-blush);
+  padding-bottom: 32px;
+
+  @media (min-width: 1280px) {
+    padding-bottom: 10px;
+  }
+
 }
 
-.footer__title-box {
-  max-width: 254px;
-  @extend %uppercase;
+.footer-copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: 320px) {
+    padding-top: 20px;
+    flex-direction: column;
+    @include font(
+      $weight: 400,
+      $line-height: 19,
+      $color: map-get($colors, venus)
+    );
+  }
+  @media (min-width: 768px) {
+    padding-top: 35px;
+    flex-direction: row;
+    @include font($weight: 400, $size: 15, $color: map-get($colors, venus));
+  }
+  @media (min-width: 1280px) {
+    padding-top: 10px;
+  }
 }
-
-.socials {
-    padding: 45px 0;
-    display: flex;
-   align-items: flex-end;
-    max-width: 150px;
-    justify-content: space-between;
-}
- 
