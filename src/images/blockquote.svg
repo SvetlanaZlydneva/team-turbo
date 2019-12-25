@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="54" height="41" viewBox="0 0 54 41">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 130px;
+        fill: #e1e1e1;
+        text-anchor: middle;
+        font-family: "Bodoni MT";
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <text id="blockquote" class="cls-1" x="27.25" y="86.999"><tspan x="27.25">”</tspan></text>
+</svg>
