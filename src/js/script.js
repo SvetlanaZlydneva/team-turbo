@@ -3,13 +3,26 @@ $(".overlay").hide();
 $(".navigation__button").on('click', function () {
   $('.popup-navigation').show("slow");
   $('.overlay').show("slow");
-  $('.buy-now').hide();
+  if ($(window).width() > 768) {
+    $('.buy-now').hide();
+  }
+
 });
 $(".navigation__menu--close").on('click', function () {
   $('.popup-navigation').hide("slow");
   $('.overlay').hide("slow");
-  $('.buy-now').show();
+  if ($(window).width() > 768) {
+    $('.buy-now').show();
+  }
 });
+$(".popup-navigation a").on('click', function () {
+  $('.popup-navigation').hide();
+  $('.overlay').hide();
+  if ($(window).width() > 768) {
+    $('.buy-now').show();
+  }
+});
+
 
 
 

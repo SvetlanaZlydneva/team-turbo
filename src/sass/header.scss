@@ -54,22 +54,21 @@
   color: map-get($colors, crimson);
   font-size: 25px;
   line-height: 56px;
-  margin-left: auto;
   @media (min-width: 1280px) {
     display: none;
   }
 }
 
 .buy-now {
-  margin-bottom: 6px;
-}
-
-.buy-now__link {
   display: none;
-  width: 145px;
-  @include font($weight:700, $size:15, $line-height:40, $color: map-get($colors, crimson));
-
+  margin-bottom: 6px;
   @media (min-width: 768px) {
     display: block;
   }
+}
+
+.buy-now__link { 
+  width: 145px;
+  @include font($weight:700, $size:15, $line-height:40, $color: map-get($colors, crimson));
+  
 }
