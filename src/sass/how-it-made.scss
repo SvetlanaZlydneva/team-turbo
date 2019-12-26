@@ -32,7 +32,7 @@
   }
 
   @media(min-width: 1280px) and (min-resolution:192dpi),
-  (min-resolution:2dppx) {
+  (min-width: 1280px) and (min-resolution:2dppx) {
     background: url(../images/section-made@2x.png) no-repeat center/cover, map-get($colors, lavender-blush);
   }
 
